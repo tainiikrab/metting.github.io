@@ -171,11 +171,23 @@ html, body {
     margin-bottom: 20px;
     max-height: 72px;
 }
+#circle-img{
+    max-width: 450px;
+}
+.check-img{
+    max-width: 20px;
+}
+#man-img{
+    max-width: 572px;
+}
 #logo{
     height: auto; 
     width: auto; 
     max-width: 30px; 
     max-height: 30px;
+}
+#interf-img{
+    max-width: 600px;
 }
 #people-img{
     height: auto; 
@@ -309,7 +321,7 @@ h1{
     padding: 0 40px;
     margin-bottom: 60px;
 }
-#pb-1{
+.pb-1{
     max-width: 600px;
     flex-direction: column;
     align-items: flex-start;
@@ -449,6 +461,138 @@ h1{
 .learn:hover{
     color:#005fec;
 }
+#bg{
+    min-width: 100%;
+    background: rgba(0, 95, 236, 0.05);
+    padding: 80px 20px;
+}
+#bg1{
+    background: #FAFAFA;
+    min-width: 100%;
+    padding: 80px 20px;
+}
+#desktop-txt1{
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #18216D;  
+    opacity: 0.8;
+    margin-bottom: 35px;
+}
+#b_btn{
+    background-color: #005fec;
+    color:#FFFFFF;
+    padding: 15px, 28px;
+}
+#integrate{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    color: #18216D;
+}
+#interf{
+    max-width: 500px;
+    padding-right: 50px;
+}
+#contain{
+    flex-grow: 1;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 40px;
+    margin-bottom: 60px;
+}
+#man-txt{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #18216D;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.check{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #18216D;
+    margin-bottom: 20px;
+    
+}
+.check + .check + .check{
+    margin-bottom: 40px;
+    
+}
+.check-img{
+    margin-right: 10px;
+}
+.check-container{
+    flex-direction: column;
+    align-items: flex-start;
+}
+#man-pb{
+    padding-top: 30px;
+}
+#italic{
+    padding-top: 40px;
+    margin-bottom: 35px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 44px;
+    color: #18216D;
+    opacity: 0.9;
+}
+#interf > p + p{
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 26px;
+    color: #18216D;
+}
+#interf > p + p + p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #18216D;
+    opacity: 0.6;
+    margin-bottom: 50px;
+}
+#circle-img{
+    animation: circle 3.5s ease-in-out infinite;
+    /* animation-play-state: paused; */
+    /* transition: .5s ease-in-out; */
+}
+/* #circle-img:hover{
+    animation-play-state: running;
+    transform: rotate(190deg)
+} */
+@keyframes circle {
+    0%{
+        transform: rotate(360deg);
+    }
+    30% {
+        transform: rotate(380deg);
+    }
+    60% {
+        transform: rotate(-20deg);
+    }
+    90%{
+        transform: rotate(0deg);
+    }
+    /* 100%{
+        transform: rotate(0deg);
+    } */
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -483,12 +627,16 @@ h1{
 
 
 @media (max-width: 1095px){
-    .people-block{
+    #interf{
+        text-align: center;
+        padding-right: 0px;
+    }
+    .people-block, #contain{
         max-width: 700px;
         flex-direction: column;
         margin-bottom: 0px;
     }
-    #pb-1{
+    .pb-1{
         align-items: center;
     }
     h1, p{
@@ -543,6 +691,15 @@ h1{
     .arg-small{
         text-align: left;
     }
+    .pb-1 > .check{
+        align-items: left;
+        justify-content: left;
+        text-align: left;
+    }
+    #man-pb{
+        padding-top: 80px;
+    }
+    
 }   
 
 
@@ -616,6 +773,9 @@ h1{
     .logos:last-child{
         display: none;
     }
+    #people-img{
+        width: 60vw;
+    }
 }
 @media (max-width: 750px){
     .arg-blocks{
@@ -627,6 +787,13 @@ h1{
     .arg{
         margin-bottom: 50px;
     }
+    #interf-img, #man-img{
+        max-width: 70vw;
+    }
+    #interf{
+        max-width: 80vw;
+        text-align: center;
+    }
 }
 @media (max-width: 600px){
     .logos:nth-child(5){
@@ -634,9 +801,6 @@ h1{
     }
 }
 @media (max-width: 500px){
-    #people-img{
-        max-width: 300px;
-    }
     .ratings{
         min-width: 300px;
     }
@@ -653,6 +817,7 @@ h1{
     }
     .hearts{
         align-items: center;
+        margin-bottom: 40px;
     }
     .logos{
         max-width: 60px;
